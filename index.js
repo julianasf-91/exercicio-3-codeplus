@@ -24,6 +24,13 @@ const parentList = [
 ]
 
 function renderParentList(list){
+  for (const family of parentList) {
+    if (family.name == 'Fernanda' || family.name == 'Patricia') {
+      $parentList.innerHTML += `<li>${family.name} é mãe de ${family.children}</li>`
+    } else {
+      $parentList.innerHTML += `<li>${family.name} é pai de ${family.children}</li>`
+    }
+  }
   console.log(list);
 }
 
